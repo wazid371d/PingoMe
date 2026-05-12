@@ -1,0 +1,19 @@
+.app-container {
+  font-family: system-ui, sans-serif;
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+p {
+  color: #374151;
+  line-height: 1.6;
+}
