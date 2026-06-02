@@ -1,0 +1,25 @@
+{
+  "_perMillion": true,
+  "_default": "sonnet",
+  "opus": {
+    "input": 5,
+    "output": 25,
+    "cacheWrite": 6.25,
+    "cacheWrite1h": 10,
+    "cacheRead": 0.5
+  },
+  "sonnet": {
+    "input": 3,
+    "output": 15,
+    "cacheWrite": 3.75,
+    "cacheWrite1h": 6,
+    "cacheRead": 0.3
+  },
+  "haiku": {
+    "input": 1,
+    "output": 5,
+    "cacheWrite": 1.25,
+    "cacheWrite1h": 2,
+    "cacheRead": 0.1
+  }
+}
