@@ -1,40 +1,51 @@
 {
-  "generatedAt": "2026-06-02T23:50:16.870Z",
+  "generatedAt": "2026-06-03T00:12:39.841Z",
   "project": "pingome",
   "summary": {
-    "totalTokens": 150,
-    "totalCost": 0.00036,
+    "totalTokens": 200,
+    "totalCost": 0.00048,
     "totalDevelopers": 1,
     "totalBranches": 1,
-    "totalEntries": 1
+    "totalEntries": 2
   },
   "byDeveloper": [
     {
       "email": "wazid371d@gmail.com",
       "name": "wazid371d",
-      "tokens": 150,
-      "cost": 0.00036,
-      "usageCount": 1,
-      "averageTokensPerUsage": 150,
-      "lastUsed": "2026-06-02T23:49:57.575Z"
+      "tokens": 200,
+      "cost": 0.00048,
+      "usageCount": 2,
+      "averageTokensPerUsage": 100,
+      "lastUsed": "2026-06-03T00:06:49.411Z"
     }
   ],
   "byBranch": [
     {
       "branch": "main",
-      "tokens": 150,
-      "cost": 0.00036,
+      "tokens": 200,
+      "cost": 0.00048,
       "developers": [
         {
           "email": "wazid371d@gmail.com",
           "name": "wazid371d",
-          "tokens": 150,
-          "cost": 0.00036
+          "tokens": 200,
+          "cost": 0.00048
         }
       ]
     }
   ],
   "recentEntries": [
+    {
+      "timestamp": "2026-06-03T00:06:49.411Z",
+      "developer": "wazid371d",
+      "email": "wazid371d@gmail.com",
+      "branch": "main",
+      "commit": "42a7499e693199425149d6bd2d9db988e4f4b6d1",
+      "tokens": 50,
+      "cost": 0.00012,
+      "model": "haiku",
+      "description": "Copilot Chat usage"
+    },
     {
       "timestamp": "2026-06-02T23:49:57.575Z",
       "developer": "wazid371d",
