@@ -3,10 +3,50 @@
   "currency": "USD",
   "budgetMonthlyUSD": 0,
   "totals": {
-    "tokens": 0,
-    "costUSD": 0,
-    "perModel": {}
+    "tokens": 399435,
+    "costUSD": 1.022804,
+    "perModel": {
+      "sonnet": {
+        "input": 0,
+        "output": 0,
+        "cacheCreate": 0,
+        "cacheCreate1h": 0,
+        "cacheRead": 0
+      },
+      "opus": {
+        "input": 3587,
+        "output": 8482,
+        "cacheCreate": 0,
+        "cacheCreate1h": 63067,
+        "cacheRead": 324299
+      }
+    }
   },
-  "developers": {},
-  "updatedAt": "2026-06-02T22:54:17.860Z"
+  "developers": {
+    "wazid371d@gmail.com": {
+      "name": "wazid371d",
+      "email": "wazid371d@gmail.com",
+      "perModel": {
+        "sonnet": {
+          "input": 0,
+          "output": 0,
+          "cacheCreate": 0,
+          "cacheCreate1h": 0,
+          "cacheRead": 0
+        },
+        "opus": {
+          "input": 3587,
+          "output": 8482,
+          "cacheCreate": 0,
+          "cacheCreate1h": 63067,
+          "cacheRead": 324299
+        }
+      },
+      "tokens": 399435,
+      "costUSD": 1.022804,
+      "commits": 1,
+      "lastUpdated": "2026-06-03T19:17:32.624Z"
+    }
+  },
+  "updatedAt": "2026-06-03T19:17:32.625Z"
 }

@@ -91,7 +91,7 @@ export default function App() {
       <header className="hero-panel">
         <div>
           <span className="eyebrow">PingoMe</span>
-          <h1>Order the best food near you</h1>
+          <h1>Order the best food near you Wazid</h1>
           <p>
             Browse a curated menu of delicious meals, add items to your cart, and
             preview your order instantly.
