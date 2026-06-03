@@ -4,26 +4,26 @@
   "developers": {
     "wazid371d@gmail.com": {
       "name": "wazid371d",
-      "tokens": 150,
-      "cost": 0.00035999999999999997,
-      "usageCount": 1,
-      "lastUsed": "2026-06-02T23:49:57.575Z"
+      "tokens": 200,
+      "cost": 0.00047999999999999996,
+      "usageCount": 2,
+      "lastUsed": "2026-06-03T00:06:49.411Z"
     }
   },
   "branches": {
     "main": {
-      "tokens": 150,
-      "cost": 0.00035999999999999997,
+      "tokens": 200,
+      "cost": 0.00047999999999999996,
       "developers": {
         "wazid371d@gmail.com": {
           "name": "wazid371d",
-          "tokens": 150,
-          "cost": 0.00035999999999999997
+          "tokens": 200,
+          "cost": 0.00047999999999999996
         }
       }
     }
   },
-  "totalTokens": 150,
-  "totalCost": 0.00035999999999999997,
-  "lastUpdated": "2026-06-02T23:49:57.575Z"
+  "totalTokens": 200,
+  "totalCost": 0.00047999999999999996,
+  "lastUpdated": "2026-06-03T00:06:49.411Z"
 }
