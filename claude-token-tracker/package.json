@@ -1,0 +1,28 @@
+{
+  "name": "claude-token-tracker",
+  "version": "2.0.0",
+  "description": "Continuously capture Claude Code token usage per developer, compute cost, and aggregate per-project team spend across git commits — with optional reconciliation against the Anthropic Admin Cost API.",
+  "type": "module",
+  "bin": {
+    "claude-tokens": "bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src",
+    "scripts",
+    "README.md"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "tokens",
+    "cost",
+    "budget",
+    "finops",
+    "git-hook"
+  ],
+  "license": "MIT"
+}

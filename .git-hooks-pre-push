@@ -1,0 +1,26 @@
+#!/bin/bash
+# Pre-push hook: Sync Copilot tokens globally before push
+# Copy this to .git/hooks/pre-push and make it executable
+
+# This hook ensures all token data is committed before pushing
+# so the whole team can see updated token tracking
+
+if [ -d ".copilot-tokens" ]; then
+  echo "📊 Syncing Copilot token data..."
+  
+  # Add token files to git if they exist
+  if [ -f ".copilot-tokens/global-tokens.json" ]; then
+    git add .copilot-tokens/global-tokens.json
+  fi
+  
+  if [ -f ".copilot-tokens/team-report.json" ]; then
+    git add .copilot-tokens/team-report.json
+  fi
+  
+  # Commit if there are changes
+  if ! git diff-index --quiet --cached HEAD --; then
+    git commit -m "chore: update copilot token tracking data"
+  fi
+fi
+
+echo "✅ Token data synced"

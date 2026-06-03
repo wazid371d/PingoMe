@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-06-02T23:50:16.870Z",
+  "project": "pingome",
+  "summary": {
+    "totalTokens": 150,
+    "totalCost": 0.00036,
+    "totalDevelopers": 1,
+    "totalBranches": 1,
+    "totalEntries": 1
+  },
+  "byDeveloper": [
+    {
+      "email": "wazid371d@gmail.com",
+      "name": "wazid371d",
+      "tokens": 150,
+      "cost": 0.00036,
+      "usageCount": 1,
+      "averageTokensPerUsage": 150,
+      "lastUsed": "2026-06-02T23:49:57.575Z"
+    }
+  ],
+  "byBranch": [
+    {
+      "branch": "main",
+      "tokens": 150,
+      "cost": 0.00036,
+      "developers": [
+        {
+          "email": "wazid371d@gmail.com",
+          "name": "wazid371d",
+          "tokens": 150,
+          "cost": 0.00036
+        }
+      ]
+    }
+  ],
+  "recentEntries": [
+    {
+      "timestamp": "2026-06-02T23:49:57.575Z",
+      "developer": "wazid371d",
+      "email": "wazid371d@gmail.com",
+      "branch": "main",
+      "commit": "5502490359bd49217232044714e489f97ac9d8ff",
+      "tokens": 150,
+      "cost": 0.00036,
+      "model": "haiku",
+      "description": "This conversation with Copilot Chat"
+    }
+  ]
+}

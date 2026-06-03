@@ -8,6 +8,11 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx",
     "format": "prettier --write .",
+    "copilot:log": "node copilot-tokens-tracker.js log",
+    "copilot:status": "node copilot-tokens-tracker.js status",
+    "copilot:my-status": "node copilot-tokens-tracker.js my-status",
+    "copilot:report": "node copilot-tokens-tracker.js report",
+    "copilot:export": "node copilot-tokens-tracker.js export",
     "tokens": "claude-tokens",
     "tokens:status": "claude-tokens status",
     "tokens:report": "claude-tokens report",
@@ -23,6 +28,6 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.0.0",
-    "claude-token-tracker": "file:../../Downloads/claude-token-tracker"
+    "claude-token-tracker": "file:./claude-token-tracker"
   }
 }

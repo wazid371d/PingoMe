@@ -94,12 +94,12 @@ export default function App() {
           <h1>Order the best food near you</h1>
           <p>
             Browse a curated menu of delicious meals, add items to your cart, and
-            preview your order instantly. No backend needed.
+            preview your order instantly.
           </p>
         </div>
         <div className="hero-image-card">
           <img
-            src="https://images.unsplash.com/photo-1555992336-03a23c6f8f81?auto=format&fit=crop&w=900&q=80"
+            src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=900&q=80"
             alt="Delicious food"
           />
           <div className="hero-tag">Fresh meals ready to order</div>

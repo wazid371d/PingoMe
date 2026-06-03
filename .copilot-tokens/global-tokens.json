@@ -1,0 +1,29 @@
+{
+  "project": "pingome",
+  "createdAt": "2026-06-02T23:49:57.576Z",
+  "developers": {
+    "wazid371d@gmail.com": {
+      "name": "wazid371d",
+      "tokens": 150,
+      "cost": 0.00035999999999999997,
+      "usageCount": 1,
+      "lastUsed": "2026-06-02T23:49:57.575Z"
+    }
+  },
+  "branches": {
+    "main": {
+      "tokens": 150,
+      "cost": 0.00035999999999999997,
+      "developers": {
+        "wazid371d@gmail.com": {
+          "name": "wazid371d",
+          "tokens": 150,
+          "cost": 0.00035999999999999997
+        }
+      }
+    }
+  },
+  "totalTokens": 150,
+  "totalCost": 0.00035999999999999997,
+  "lastUpdated": "2026-06-02T23:49:57.575Z"
+}

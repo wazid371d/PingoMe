@@ -1,0 +1,11 @@
+#!/bin/bash
+# Post-commit hook: Auto-track Copilot Chat tokens
+# Copy this to .git/hooks/post-commit and make it executable
+
+# This hook automatically logs Copilot Chat token usage after each commit
+# You can manually add tokens or they can be tracked by your VS Code extension
+
+# Example: Uncomment and modify to auto-log tokens
+# node copilot-tokens-tracker.js log 50 haiku "Commit: $(git log -1 --pretty=%B)"
+
+echo "✅ Commit completed"
