@@ -9,29 +9,43 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
     expiry: '',
     cvv: '',
   });
-  const [placed, setPlaced] = useState(false);
+  const [paymentStage, setPaymentStage] = useState('form');
 
   const updateField = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setPlaced(true);
+    setPaymentStage('qr');
   };
 
   const taxes = total * 0.08;
   const grandTotal = total + taxes;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code?size=280x280&data=${encodeURIComponent(
+    `Pay ${grandTotal.toFixed(2)} with PingoMe dummy QR`
+  )}&bgcolor=ffffff&color=000000`;
 
-  if (placed) {
+  if (paymentStage === 'qr') {
     return (
       <div className="checkout-shell">
-        <div className="payment-success">
-          <div className="success-icon">✓</div>
-          <h1>Payment Successful</h1>
-          <p>
-            Thank you, {form.name || 'friend'}! Your order of $
-            {grandTotal.toFixed(2)} has been confirmed.
-          </p>
+        <button className="back-button" onClick={onBack}>
+          ← Back to menu
+        </button>
+
+        <div className="payment-qr">
+          <div className="section-header">
+            <h2>Pay with QR Code</h2>
+            <p>Scan this code with your payment app to complete the order.</p>
+          </div>
+          <div className="qr-card">
+            <img src={qrUrl} alt="Dummy payment QR code" />
+            <div className="qr-details">
+              <strong>Amount:</strong> ${grandTotal.toFixed(2)}
+            </div>
+            <div className="qr-note">
+              This is a demo payment page. Scan the QR code to simulate a payment.
+            </div>
+          </div>
           <button className="checkout-button" onClick={onBack}>
             Back to menu
           </button>

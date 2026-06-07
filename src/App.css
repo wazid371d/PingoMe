@@ -609,6 +609,48 @@ button {
   gap: 1rem;
 }
 
+.payment-qr {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 520px;
+  width: 100%;
+}
+
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.1);
+}
+
+.qr-card img {
+  width: 280px;
+  height: 280px;
+  max-width: 100%;
+  border-radius: 2rem;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  background: #ffffff;
+}
+
+.qr-details {
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.qr-note {
+  max-width: 36rem;
+  color: #4b5563;
+  line-height: 1.75;
+  text-align: center;
+}
+
 .success-icon {
   width: 4rem;
   height: 4rem;
