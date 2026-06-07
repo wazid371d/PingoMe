@@ -21,9 +21,10 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
 
   const taxes = total * 0.08;
   const grandTotal = total + taxes;
+  const itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code?size=280x280&data=${encodeURIComponent(
     `Pay ${grandTotal.toFixed(2)} with PingoMe dummy QR`
-  )}&bgcolor=ffffff&color=000000`;
+  )}&bgcolor=ffffff&color=4f46e5`;
 
   if (paymentStage === 'qr') {
     return (
@@ -32,23 +33,28 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
           ← Back to menu
         </button>
 
+        <div className="checkout-hero">
+          <span className="checkout-hero-badge">Almost there</span>
+          <h2>Scan &amp; Pay</h2>
+          <p>Open your favorite UPI or wallet app and scan to complete the order.</p>
+        </div>
+
         <div className="payment-qr">
-          <div className="section-header">
-            <h2>Pay with QR Code</h2>
-            <p>Scan this code with your payment app to complete the order.</p>
-          </div>
           <div className="qr-card">
-            <img src={qrUrl} alt="Dummy payment QR code" />
-            <div className="qr-details">
-              <strong>Amount:</strong> ${grandTotal.toFixed(2)}
+            <div className="qr-amount-pill">
+              Total due <strong>${grandTotal.toFixed(2)}</strong>
+            </div>
+            <div className="qr-frame">
+              <img src={qrUrl} alt="Dummy payment QR code" />
             </div>
             <div className="qr-note">
-              This is a demo payment page. Scan the QR code to simulate a payment.
+              <span className="qr-lock">🔒</span> This is a demo payment page. Scan
+              the QR code to simulate a secure payment.
             </div>
+            <button className="checkout-button" onClick={onBack}>
+              Done — back to menu
+            </button>
           </div>
-          <button className="checkout-button" onClick={onBack}>
-            Back to menu
-          </button>
         </div>
       </div>
     );
@@ -60,14 +66,23 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
         ← Back to menu
       </button>
 
-      <div className="section-header">
-        <h2>Checkout</h2>
-        <p>Review your order and complete the payment.</p>
+      <div className="checkout-hero">
+        <span className="checkout-hero-badge">Secure checkout</span>
+        <h2>Complete your order</h2>
+        <p>You're just one step away from a delicious meal.</p>
+        <div className="checkout-steps">
+          <span className="step done">1 · Cart</span>
+          <span className="step active">2 · Payment</span>
+          <span className="step">3 · Confirm</span>
+        </div>
       </div>
 
       <div className="checkout-grid">
         <section className="payment-panel">
-          <h3>Payment Details</h3>
+          <div className="panel-head">
+            <h3>Payment details</h3>
+            <span className="card-brands">💳 Visa · Mastercard · UPI</span>
+          </div>
           <form className="payment-form" onSubmit={handleSubmit}>
             <label>
               Full name
@@ -143,17 +158,27 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
             >
               Pay ${grandTotal.toFixed(2)}
             </button>
+            <p className="secure-note">
+              <span>🔒</span> Payments are encrypted and 100% secure.
+            </p>
           </form>
         </section>
 
         <aside className="order-summary-panel">
-          <h3>Order Summary</h3>
+          <div className="panel-head">
+            <h3>Order summary</h3>
+            <span className="summary-count">{itemCount} item{itemCount === 1 ? '' : 's'}</span>
+          </div>
           <div className="summary-list">
             {cartItems.map((item) => (
               <div key={item.id} className="summary-item">
-                <span>
-                  {item.name} × {item.quantity}
-                </span>
+                <div className="summary-item-media">
+                  <img src={item.image} alt={item.name} />
+                  <div>
+                    <span className="summary-item-name">{item.name}</span>
+                    <span className="summary-item-qty">Qty {item.quantity}</span>
+                  </div>
+                </div>
                 <strong>${(item.price * item.quantity).toFixed(2)}</strong>
               </div>
             ))}
@@ -166,6 +191,10 @@ export default function CheckoutPage({ cartItems, total, onBack }) {
             <div>
               <span>Taxes (8%)</span>
               <span>${taxes.toFixed(2)}</span>
+            </div>
+            <div>
+              <span>Delivery</span>
+              <span className="free-tag">Free</span>
             </div>
             <div className="summary-grand">
               <span>Total</span>

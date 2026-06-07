@@ -3,8 +3,8 @@
   "currency": "USD",
   "budgetMonthlyUSD": 0,
   "totals": {
-    "tokens": 841507,
-    "costUSD": 1.63895,
+    "tokens": 1156273,
+    "costUSD": 2.155465,
     "perModel": {
       "sonnet": {
         "input": 0,
@@ -14,11 +14,11 @@
         "cacheRead": 0
       },
       "opus": {
-        "input": 6422,
-        "output": 16216,
+        "input": 6558,
+        "output": 25329,
         "cacheCreate": 0,
-        "cacheCreate1h": 83369,
-        "cacheRead": 735500
+        "cacheCreate1h": 97606,
+        "cacheRead": 1026780
       }
     }
   },
@@ -35,18 +35,18 @@
           "cacheRead": 0
         },
         "opus": {
-          "input": 6422,
-          "output": 16216,
+          "input": 6558,
+          "output": 25329,
           "cacheCreate": 0,
-          "cacheCreate1h": 83369,
-          "cacheRead": 735500
+          "cacheCreate1h": 97606,
+          "cacheRead": 1026780
         }
       },
-      "tokens": 841507,
-      "costUSD": 1.63895,
-      "commits": 2,
-      "lastUpdated": "2026-06-07T10:48:34.936Z"
+      "tokens": 1156273,
+      "costUSD": 2.155465,
+      "commits": 3,
+      "lastUpdated": "2026-06-07T11:22:58.526Z"
     }
   },
-  "updatedAt": "2026-06-07T10:48:34.937Z"
+  "updatedAt": "2026-06-07T11:22:58.526Z"
 }
