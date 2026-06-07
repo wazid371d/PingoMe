@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import './App.css';
+import CheckoutPage from './CheckoutPage';
 
 const dishes = [
   {
@@ -54,6 +55,7 @@ const dishes = [
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [view, setView] = useState('menu');
 
   const addToCart = (dish) => {
     setCartItems((current) => {
@@ -85,6 +87,18 @@ export default function App() {
     () => cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0),
     [cartItems]
   );
+
+  if (view === 'checkout') {
+    return (
+      <div className="app-shell">
+        <CheckoutPage
+          cartItems={cartItems}
+          total={total}
+          onBack={() => setView('menu')}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="app-shell">
@@ -173,7 +187,11 @@ export default function App() {
               <span>Subtotal</span>
               <strong>${total.toFixed(2)}</strong>
             </div>
-            <button className="checkout-button" disabled={cartItems.length === 0}>
+            <button
+              className="checkout-button"
+              disabled={cartItems.length === 0}
+              onClick={() => setView('checkout')}
+            >
               Checkout
             </button>
           </div>
